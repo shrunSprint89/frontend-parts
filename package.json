@@ -7,14 +7,30 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "bun run lint:eslint && bun run lint:prettier",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier . --check",
+    "lintfix": "eslint . --fix && prettier --write --list-different ."
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxt/eslint": "^1.0.0",
+    "@nuxt/image": "1.9.0",
     "@nuxtjs/tailwindcss": "latest",
+    "autoprefixer": "^10.4.20",
     "daisyui": "latest",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
     "nuxt": "latest",
+    "postcss": "^8.5.1",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "dependencies": {
+    "@nuxt/content": "^3.0.1"
   }
 }
