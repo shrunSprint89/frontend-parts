@@ -1,6 +1,10 @@
-# Nuxt 3 Minimal Starter
+# Frontend-parts
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Project is still _WIP_.
+
+An attempt to comparatively analyse frontend technologies and frameworks. A compilation that can help a frontend engineer be more language and framework-agnostic.
+
+Built with ❤️ using [Nuxt](https://nuxt.com/) and [Nuxt content](https://content.nuxt.com/) and [Vue-3](https://vuejs.org/), with [DaisyUI](https://daisyui.com/) and [tailwindcss](https://tailwindcss.com/) powering the UI components.
 
 ## Setup
 
@@ -71,5 +75,3 @@ yarn preview
 # bun
 bun run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
