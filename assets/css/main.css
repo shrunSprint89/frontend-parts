@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Define custom variables */
+:root {
+  @apply min-h-dvh;
+}
+#__nuxt {
+  @apply min-h-dvh;
+}

@@ -7,14 +7,16 @@ export default defineContentConfig({
       source: "**/*.md",
       schema: z.object({
         title: z.string(),
+        navTitle: z.string(),
+        tabTitle: z.string().optional(),
         description: z.string(),
         seo: z.intersection(
           z.object({
             title: z.string().optional(),
             description: z.string().optional(),
+            navTitle: z.string().optional(),
             meta: z.array(z.record(z.string(), z.any())).optional(),
             link: z.array(z.record(z.string(), z.any())).optional(),
-
             date: z.date(),
             image: z.string().optional(),
             alt: z.string().optional(),

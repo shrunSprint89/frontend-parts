@@ -16,6 +16,9 @@ export default defineNuxtConfig({
       ],
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
       title: "Nuxt 3 Starter",
+      bodyAttrs: {
+        class: "min-h-dvh",
+      },
     },
   },
   compatibilityDate: "2025-02-02",

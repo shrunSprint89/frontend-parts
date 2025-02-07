@@ -14,12 +14,14 @@
     "lintfix": "eslint . --fix && prettier --write --list-different ."
   },
   "devDependencies": {
+    "@iconify-json/bxs": "^1.2.2",
     "@nuxt/devtools": "latest",
     "@nuxt/eslint": "^1.0.0",
+    "@nuxt/icon": "1.10.3",
     "@nuxt/image": "1.9.0",
-    "@nuxtjs/tailwindcss": "latest",
+    "@nuxtjs/tailwindcss": "^6.13.1",
     "autoprefixer": "^10.4.20",
-    "daisyui": "latest",
+    "daisyui": "^4.12.23",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
@@ -31,6 +33,7 @@
     "vue-router": "latest"
   },
   "dependencies": {
+    "@heroicons/vue": "^2.2.0",
     "@nuxt/content": "^3.0.1"
   }
 }
