@@ -2,6 +2,9 @@ import { fileURLToPath } from "url";
 
 // @blocksort asc
 export default defineNuxtConfig({
+  nitro: {
+    preset: "cloudflare_pages",
+  },
   alias: {
     "@types": fileURLToPath(new URL("./types", import.meta.url)),
   },
