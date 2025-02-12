@@ -6,10 +6,19 @@
 </template>
 
 <script setup lang="ts">
+import type { ContentNavigationItem } from "@nuxt/content";
+import { ARTICLES_ROUTE_PATH } from "~/constants";
+
 const { data } = await useAsyncData("navigation", () => {
-  return queryCollectionNavigation("docs", ["navTitle", "path"]).then((val) => {
-    return val;
-  });
+  return queryCollectionNavigation("docs", ["navTitle", "path"]).then(
+    (items) => {
+      return items
+        .filter((item: ContentNavigationItem) =>
+          item.path.includes(ARTICLES_ROUTE_PATH)
+        )
+        .at(0)?.children;
+    }
+  );
 });
 const { value: navItems } = data;
 const errorMsg = "Oops! Something went wrong:";

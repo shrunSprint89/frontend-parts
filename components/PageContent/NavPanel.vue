@@ -17,12 +17,12 @@
         </svg>
       </button>
     </div>
-    <div class="navbar-center w-4/12 hidden lg:flex">
+    <div class="navbar-center w-6/12 hidden lg:flex p-3">
       <div class="form-control w-full">
         <input
           type="text"
           placeholder="Search"
-          class="input input-bordered md:w-auto hover:drop-shadow-md"
+          class="input input-bordered indent-2 md:w-auto hover:drop-shadow-md"
           v-model="searchValue"
           @input="debouncedHandleSearch"
         ></input>

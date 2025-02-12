@@ -5,14 +5,12 @@
 
     <!-- Main Content Area -->
     <div class="flex-grow flex flex-col md:flex-row flex-1">
-      <MenuSidepanel class="flex-3" />
+      <MenuSidepanel class="flex-none w-full md:w-64 md:max-w-xs lg:w-96" />
 
       <!-- Main Content -->
-      <main class="flex-1">
-        <PageContentPanel>
-          <slot />
-        </PageContentPanel>
-      </main>
+      <PageContentPanel class="flex-1">
+        <slot />
+      </PageContentPanel>
     </div>
     <FooterBottomBar class="flex-3" />
   </div>

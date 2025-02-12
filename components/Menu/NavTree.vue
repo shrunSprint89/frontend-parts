@@ -5,7 +5,7 @@
   >
     <li v-for="item in navItems" :key="item.path">
       <details v-if="item.children">
-        <summary>{{ item.navTitle ?? item.title }}</summary>
+        <summary>{{ item.title }}</summary>
         <!-- <ul class="z-10">
           <li v-for="child in item.children" :key="child.path">
             <NuxtLink :to="child.path">{{ child.navTitle }}</NuxtLink>

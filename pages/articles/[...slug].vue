@@ -6,7 +6,9 @@
 </template>
 
 <script setup lang="ts">
-const data = await usePageData("angular");
+const slug = useRoute().params.slug;
+console.log(slug);
+const data = await usePageData();
 </script>
 
 <style scoped>
