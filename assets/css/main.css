@@ -9,3 +9,65 @@
 #__nuxt {
   @apply min-h-dvh;
 }
+
+body {
+  @apply min-h-screen dark:bg-gray-800 dark:text-gray-200;
+  font-family: "Raleway", "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply mt-4 lg:mt-6 font-bold;
+  font-family: "Libre Baskerville", serif;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  @apply font-semibold;
+}
+
+article {
+  p,
+  ul,
+  ol,
+  code,
+  pre {
+    @apply mt-2 lg:mt-3 text-sm md:text-base;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    + {
+      p,
+      ul,
+      ol,
+      code,
+      pre {
+        @apply mt-3 lg:mt-5;
+      }
+    }
+  }
+
+  h1 {
+    @apply text-xl lg:text-2xl;
+  }
+
+  h2 {
+    @apply text-lg lg:text-xl;
+  }
+
+  code,
+  pre {
+    @apply text-sm;
+  }
+}

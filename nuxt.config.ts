@@ -1,12 +1,14 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-import * as daisyui from "daisyui";
+import { fileURLToPath } from "url";
 
 // @blocksort asc
 export default defineNuxtConfig({
+  alias: {
+    "@types": fileURLToPath(new URL("./types", import.meta.url)),
+  },
   app: {
     head: {
       htmlAttrs: {
-        ["data-theme"]: "retro",
+        ["data-theme"]: "system",
         lang: "en",
       },
       meta: [
@@ -21,24 +23,47 @@ export default defineNuxtConfig({
       },
     },
   },
+  colorMode: {
+    preference: "system", // default theme
+    dataValue: "theme", // activate data-theme in <html> tag
+  },
   compatibilityDate: "2025-02-02",
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          langs: [
+            "js",
+            "jsx",
+            "json",
+            "ts",
+            "tsx",
+            "css",
+            "html",
+            "vue",
+            "md",
+            "mdc",
+          ],
+          theme: "nord",
+        },
+      },
+    },
+  },
   css: ["~/assets/css/main.css"],
   devtools: { enabled: true },
   modules: [
     "@nuxt/eslint",
     "@nuxtjs/tailwindcss",
+    "@nuxtjs/color-mode",
     "@nuxt/content",
     "@nuxt/image",
+    "@nuxt/fonts",
+    "@vueuse/nuxt",
   ],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
-    },
-  },
-  tailwindcss: {
-    config: {
-      plugins: [daisyui],
     },
   },
 });

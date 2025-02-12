@@ -27,6 +27,7 @@ export default defineContentConfig({
             ogDescription: z.string().optional(),
             ogImage: z.string().optional(),
             twitterTitle: z.string().optional(),
+            twitterDescription: z.string().optional(),
             twitterImage: z.string().optional(),
             twitterCard: z
               .enum(["app", "summary", "summary_large_image", "player"])

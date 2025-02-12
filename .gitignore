@@ -5,9 +5,12 @@
 .nitro
 .cache
 dist
+.data
 
 # Node dependencies
 node_modules
+package-lock.json
+bun.lock
 
 # Logs
 logs
@@ -17,10 +20,10 @@ logs
 .DS_Store
 .fleet
 .idea
+.gitignore
+
 
 # Local env files
 .env
 .env.*
 !.env.example
-
-package-lock.json

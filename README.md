@@ -4,7 +4,11 @@ Project is still _WIP_.
 
 An attempt to comparatively analyse frontend technologies and frameworks. A compilation that can help a frontend engineer be more language and framework-agnostic.
 
-Built with ❤️ using [Nuxt](https://nuxt.com/) and [Nuxt content](https://content.nuxt.com/) and [Vue-3](https://vuejs.org/), with [DaisyUI](https://daisyui.com/) and [tailwindcss](https://tailwindcss.com/) powering the UI components.
+Built with ❤️ using [Vue-3](https://vuejs.org/) and [Nuxt](https://nuxt.com/) with [Nuxt content](https://content.nuxt.com/), using [DaisyUI](https://daisyui.com/) and [tailwindcss](https://tailwindcss.com/) for styling.
+
+## How to use the resources?
+
+Option 1: Read the articles starting from the [https://frontend.parts/](https://frontend.parts/)
 
 ## Setup
 
@@ -75,3 +79,15 @@ yarn preview
 # bun
 bun run preview
 ```
+
+### Roadmap
+
+- [x] V1 with Angular/React and Vue comparisons
+  - [ ] Add content for existing topics or frontnend engineering problems
+  - [ ] Move content to separate repo (if feasible) to separate concerns
+  - [ ] Add a step by step navigation component that uses a important or weight based on topic
+- [ ] V2
+  - [ ] Svelte code example addition
+  - [ ] Add more themes and better code highlighting with themes for code highlighting
+- [ ] User authentication with SSO and bookmarking / last read
+- [ ] Videos explaining content with examples
