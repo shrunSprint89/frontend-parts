@@ -8,8 +8,8 @@
       :key="item.path"
       role="tab"
       :aria-selected="isActiveTab(item)"
-      class="text-left indent-5 md:indent-0 md:tab"
-      :class="{ 'tab-active': isActiveTab(item) }"
+      class="w-full ps-3 pe-3 md:indent-0 md:tab rounded-[5px]"
+      :class="{ 'tab-active btn-active': isActiveTab(item) }"
       @click="navigateToPath(item)"
     >
       {{ item.navTitle ?? item.title }}
