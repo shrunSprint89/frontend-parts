@@ -1,9 +1,11 @@
 import { fileURLToPath } from "url";
-
 // @blocksort asc
 export default defineNuxtConfig({
   nitro: {
     preset: "cloudflare_pages",
+  },
+  imports: {
+    dirs: ["types", "constants"],
   },
   alias: {
     "@types": fileURLToPath(new URL("./types", import.meta.url)),
@@ -20,7 +22,7 @@ export default defineNuxtConfig({
         { hid: "description", name: "description", content: "" },
       ],
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
-      title: "Nuxt 3 Starter",
+      title: "Frontend.parts",
       bodyAttrs: {
         class: "min-h-dvh",
       },

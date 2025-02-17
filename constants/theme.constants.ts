@@ -1,5 +1,3 @@
-import { ThemeValue, type AppTheme } from "~/types/custom-types";
-
 export const THEMES: AppTheme[] = [
   { name: ThemeValue.system, value: "system" },
   { name: ThemeValue.aqua, value: "aqua" },

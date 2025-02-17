@@ -1,6 +1,6 @@
 <template>
   <ContentRenderer v-if="data" :value="data" />
-  <div v-else>Data not found</div>
+  <div v-else><ErrorHandler error="Data not found" /></div>
 </template>
 
 <script setup lang="ts">

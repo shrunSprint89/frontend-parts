@@ -39,6 +39,7 @@
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
     "@nuxt/content": "^3.0.1",
+    "minisearch": "^7.1.1",
     "tm-themes": "^1.9.12"
   }
 }

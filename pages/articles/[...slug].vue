@@ -1,16 +1,16 @@
 <template>
   <section>
-    <ContentRenderer v-if="data" :value="data" />
-    <div v-else>Data not found</div>
+    <div v-if="status === 'pending'" class="flex justify-center w-full h-fit">
+      <span class="loading loading-spinner loading-lg"></span>
+    </div>
+    <div v-else-if="error">Data not found</div>
+    <ContentRenderer v-else-if="data" :value="data" />
   </section>
 </template>
 
 <script setup lang="ts">
+const { log } = useLogger();
 const slug = useRoute().params.slug;
-console.log(slug);
-const data = await usePageData();
+log(LogLevel.DEBUG, "slug", slug);
+const { data, status, error } = await usePageData();
 </script>
-
-<style scoped>
-/* Add any styles specific to the markdown content */
-</style>

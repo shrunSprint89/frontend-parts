@@ -1,7 +1,16 @@
 <template>
   <nav class="navbar bg-base-200 w-full p-0">
-    <div class="navbar-start ps-3 ">
-      <button class="btn btn-square btn-ghost text-base-content drop-shadow-md" @click="handlePrevious">
+    <div class="navbar-start ps-3">
+      <label
+        for="my-drawer"
+        class="drawer-button btn btn-square btn-ghost text-base-content drop-shadow-md lg:hidden"
+      >
+        <MaterialSymbolsMenu class="inline h-6 w-6 text-base-400" />
+      </label>
+      <button
+        class="hidden md:block btn btn-square btn-ghost text-base-content drop-shadow-md"
+        @click="handlePrevious"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
@@ -17,19 +26,14 @@
         </svg>
       </button>
     </div>
-    <div class="navbar-center w-6/12 hidden lg:flex p-3">
-      <div class="form-control w-full">
-        <input
-          type="text"
-          placeholder="Search"
-          class="input input-bordered indent-2 md:w-auto hover:drop-shadow-md"
-          v-model="searchValue"
-          @input="debouncedHandleSearch"
-        ></input>
-      </div>
+    <div class="navbar-center w-9/12 md:w-6/12 lg:flex p-3">
+      <PageContentSearchBar />
     </div>
     <div class="navbar-end pe-3">
-      <button class="btn btn-square btn-ghost text-base-content drop-shadow-md" @click="handleNext">
+      <button
+        class="hidden md:block btn btn-square btn-ghost text-base-content drop-shadow-md"
+        @click="handleNext"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
@@ -49,22 +53,15 @@
 </template>
 
 <script setup lang="ts">
-const router = useRouter()
-const searchValue = useState('searchValue', () => '')
+import MaterialSymbolsMenu from "../Icons/MaterialSymbolsMenu.vue";
 
-const handleSearch = (event: Event) => {
-  const target = event.target as HTMLInputElement
-  searchValue.value = target.value
-  console.log(searchValue)
-}
-
-const debouncedHandleSearch = useDebounceFn(handleSearch, 300)
+const router = useRouter();
 
 const handleNext = () => {
-  router.forward()
-}
+  router.forward();
+};
 
 const handlePrevious = () => {
-  router.back()
-}
+  router.back();
+};
 </script>

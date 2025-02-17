@@ -1,39 +1,64 @@
 <template>
-  <div role="tablist" class="tabs tabs-boxed w-full max-w-9/10">
+  <div
+    role="tablist"
+    class="flex flex-col space-y-2 md:space-y-0 md:tabs md:tabs-boxed w-full max-w-9/10"
+  >
     <button
       v-for="item in navItems"
-      :key="item.TabTitle"
+      :key="item.path"
       role="tab"
-      :class="{ tab: true, 'tab-active': isActiveTab(item.TabTitle) }"
-      @click="setActiveTab(item.TabTitle)"
+      :aria-selected="isActiveTab(item)"
+      class="text-left indent-5 md:indent-0 md:tab"
+      :class="{ 'tab-active': isActiveTab(item) }"
+      @click="navigateToPath(item)"
     >
-      {{ item.TabTitle }}
+      {{ item.navTitle ?? item.title }}
     </button>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import type { ContentNavigationItem } from "@nuxt/content";
 import { ref } from "vue";
 
-const navItems = [
-  { TabTitle: "Home" },
-  { TabTitle: "About" },
-  { TabTitle: "Contact" },
-];
+const { navItems } = defineProps({
+  navItems: { type: Array<ContentNavigationItem>, required: true },
+});
+const router = useRouter();
+const { log } = useLogger();
+const activeTab = ref("");
 
-const activeTabTitle = ref("About"); // This should be dynamically set based on your logic
-
-const isActiveTab = (tabTitle) => {
-  return tabTitle === activeTabTitle.value;
+const isActiveTab = ({ path }: ContentNavigationItem) => {
+  if (path === "/") {
+    return activeTab.value === "/";
+  }
+  return activeTab.value.includes(path);
 };
 
-const setActiveTab = (tabTitle) => {
-  activeTabTitle.value = tabTitle;
+const setActiveTab = ({ path }: ContentNavigationItem) => {
+  activeTab.value = path;
 };
+
+const navigateToPath = ({ path }: ContentNavigationItem) => {
+  router.push(path);
+};
+
+//Set active tab logic
+router.afterEach((to) => {
+  log(LogLevel.DEBUG, "NavTabPanel afterEach", to.path);
+  setActiveTab({ path: to.path } as ContentNavigationItem);
+});
+onMounted(() => {
+  log(LogLevel.DEBUG, "NavTabPanel mounted");
+  log(LogLevel.DEBUG, "Current path", router.currentRoute.value.path);
+  setActiveTab({
+    path: router.currentRoute.value.path,
+  } as ContentNavigationItem);
+  navItems.forEach((item) => {
+    log(LogLevel.DEBUG, "NavTabPanel item", item);
+    log(LogLevel.DEBUG, "NavTabPanel item path", item.path);
+    log(LogLevel.DEBUG, "NavTabPanel item title", item.title);
+    log(LogLevel.DEBUG, "NavTabPanel item active", isActiveTab(item));
+  });
+});
 </script>
-
-<style scoped>
-.active {
-  font-weight: bold;
-}
-</style>

@@ -4,14 +4,9 @@
     <header class="w-full"><NavTopBar /></header>
 
     <!-- Main Content Area -->
-    <div class="flex-grow flex flex-col md:flex-row flex-1">
-      <MenuSidepanel class="flex-none w-full md:w-64 md:max-w-xs lg:w-96" />
-
-      <!-- Main Content -->
-      <PageContentPanel class="flex-1">
-        <slot />
-      </PageContentPanel>
-    </div>
+    <PageContentDrawerContainer class="flex-1">
+      <slot />
+    </PageContentDrawerContainer>
     <FooterBottomBar class="flex-3" />
   </div>
 </template>

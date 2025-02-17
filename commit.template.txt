@@ -1,0 +1,36 @@
+# Commit message format:
+#   [feat || fix || docs || breaking](feature-name): title here
+#
+#   description here
+#
+# Example:
+#   feat(user-login): Implement user authentication
+#
+#   This commit introduces user authentication functionality
+#   using JWT tokens for secure session management.
+#
+#   - Added login form.
+#   - Implemented JWT generation and verification.
+#   - Updated API endpoints for authentication.
+#
+# - Type (Required):
+#   - feat: A new feature
+#   - fix: A bug fix
+#   - docs: Documentation changes
+#   - breaking: A change that breaks backward compatibility
+#
+# - Feature Name (Required):
+#   - The name or identifier for the feature or area of the codebase being changed.
+#
+# - Title (Required):
+#   - A brief description of the change (max 50 characters).
+#
+# - Description (Optional):
+#   - More detailed explanation of the changes, including the "what" and "why".
+#   - Use bullet points for lists.
+#   - Keep lines under 72 characters.
+#
+# - References (Optional):
+#   - Link to related issues, pull requests, or documentation.
+#   - Example:
+#     - Related to #123

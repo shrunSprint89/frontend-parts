@@ -8,6 +8,7 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string(),
         navTitle: z.string(),
+        navOrder: z.number().optional(),
         tabTitle: z.string().optional(),
         description: z.string(),
         seo: z.intersection(

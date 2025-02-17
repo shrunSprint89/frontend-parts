@@ -1,11 +1,11 @@
-export default async function usePageData(pathSuffix?: string) {
+export default function usePageData(pathSuffix?: string) {
   const route = useRoute();
+  const { log } = useLogger();
 
-  const { data: pageData } = await useAsyncData(route.path, () => {
+  return useLazyAsyncData(route.path, () => {
+    log(LogLevel.DEBUG, `Getting content for path ${route.path}`);
     const path = pathSuffix ? `${route.path}/${pathSuffix}` : route.path;
-    console.log(`Getting content for path ${path}`);
+    log(LogLevel.DEBUG, `Getting content for path ${path}`);
     return queryCollection<"docs">("docs").path(`${path}`).first();
   });
-
-  return pageData;
 }

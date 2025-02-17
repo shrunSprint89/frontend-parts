@@ -24,3 +24,18 @@ export interface AppTheme {
   name: ThemeValue;
   value: keyof typeof ThemeValue;
 }
+
+export enum LogLevel {
+  DEBUG = "DEBUG",
+  INFO = "INFO",
+  WARN = "WARN",
+  ERROR = "ERROR",
+}
+
+export interface QuerySearchResult {
+  id: string;
+  title: string;
+  titles: string[];
+  level: number;
+  content: string;
+}

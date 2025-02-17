@@ -1,25 +1,20 @@
 <template>
-  <nav v-if="navItems?.length" class="border-r border-base-300">
-    <MenuNavTree :nav-items="navItems" :add-menu-class="true" />
+  <nav
+    v-if="articlesNavState?.isReady"
+    class="border-r border-base-300 h-full w-full md:w-1/2 lg:w-full"
+  >
+    <MenuNavTree
+      :nav-items="articlesNavState.nav"
+      :close-drawer-button="true"
+    />
   </nav>
-  <ErrorHandler v-else :error="errorMsg" />
+  <ErrorHandler v-else-if="articlesNavState?.isError" :error="errorMsg" />
+  <div v-else class="flex justify-center">
+    <span class="loading loading-spinner loading-lg"></span>
+  </div>
 </template>
 
 <script setup lang="ts">
-import type { ContentNavigationItem } from "@nuxt/content";
-import { ARTICLES_ROUTE_PATH } from "~/constants";
-
-const { data } = await useAsyncData("navigation", () => {
-  return queryCollectionNavigation("docs", ["navTitle", "path"]).then(
-    (items) => {
-      return items
-        .filter((item: ContentNavigationItem) =>
-          item.path.includes(ARTICLES_ROUTE_PATH)
-        )
-        .at(0)?.children;
-    }
-  );
-});
-const { value: navItems } = data;
+const { articlesNavState } = useAppState();
 const errorMsg = "Oops! Something went wrong:";
 </script>
