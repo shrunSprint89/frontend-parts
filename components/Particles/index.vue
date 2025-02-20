@@ -43,7 +43,7 @@ const options = {
     opacity: {
       value: {
         min: 0.05,
-        max: 0,
+        max: 0.7,
       },
       animation: {
         enable: true,
@@ -112,7 +112,7 @@ const options = {
             src: "logos/jest-svgrepo-com.svg",
           },
           {
-            src: "logos/jest-svgrepo-com (1).svg",
+            src: "logos/jest-svgrepo-com_bw.svg",
           },
           {
             src: "logos/jquery-svgrepo-com.svg",
@@ -124,7 +124,7 @@ const options = {
             src: "logos/react-svgrepo-com.svg",
           },
           {
-            src: "logos/react-svgrepo-com (1).svg",
+            src: "logos/react-svgrepo-com_bw.svg",
           },
           {
             src: "logos/vitejs-svgrepo-com.svg",
