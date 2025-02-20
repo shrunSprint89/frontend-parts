@@ -27,9 +27,14 @@ export default defineNuxtConfig({
         class: "min-h-dvh",
       },
     },
+    layoutTransition: { name: "layout", mode: "out-in" },
+    pageTransition: {
+      name: "page",
+      mode: "out-in",
+    },
   },
   colorMode: {
-    preference: "system", // default theme
+    preference: "dim", // default theme
     dataValue: "theme", // activate data-theme in <html> tag
   },
   compatibilityDate: "2025-02-02",
@@ -49,7 +54,7 @@ export default defineNuxtConfig({
             "md",
             "mdc",
           ],
-          theme: "nord",
+          theme: "github-dark-dimmed",
         },
       },
     },
@@ -64,7 +69,11 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/fonts",
     "@vueuse/nuxt",
+    "nuxt-particles",
   ],
+  particles: {
+    mode: "full",
+  },
   postcss: {
     plugins: {
       tailwindcss: {},

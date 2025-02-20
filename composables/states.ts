@@ -1,26 +1,31 @@
-import type { ContentNavigationItem } from "@nuxt/content";
-interface NavState {
-  nav: ContentNavigationItem[];
-  isLoading: boolean;
-  isReady: boolean;
-  isError: boolean;
-}
-
-export const useThemeState = () =>
+const useThemeState = () =>
   useState<AppTheme>("theme", () => ({
     name: ThemeValue.system,
     value: "system",
   }));
-export const useNavState = () =>
+const useNavState = () =>
   useState<NavState>("nav", () => ({
     nav: [],
     isLoading: false,
     isReady: false,
     isError: false,
   }));
-
-export const useArticlesNavState = () =>
+const useArticlesNavState = () =>
   useState<NavState>("articlesNav", () => ({
+    nav: [],
+    isLoading: false,
+    isReady: false,
+    isError: false,
+  }));
+const useBlogNavState = () =>
+  useState<NavState>("blogNav", () => ({
+    nav: [],
+    isLoading: false,
+    isReady: false,
+    isError: false,
+  }));
+const useAboutNavState = () =>
+  useState<NavState>("aboutNav", () => ({
     nav: [],
     isLoading: false,
     isReady: false,
@@ -30,9 +35,14 @@ export const useAppState = () => {
   const currentTheme = useThemeState();
   const navState = useNavState();
   const articlesNavState = useArticlesNavState();
+  const blogNavState = useBlogNavState();
+  const aboutNavState = useAboutNavState();
   const hasVisitedHomepage = useState("hasVisitedHomepage", () => false);
   const searchValue = useState("searchValue", () => "");
-  const isLoggingEnabled = useState("isLoggingEnabled", () => true);
+  const isLoggingEnabled = useState(
+    "isLoggingEnabled",
+    () => process.env.NODE_ENV === "development"
+  );
 
   const setTheme = ({ value, name }: AppTheme) => {
     currentTheme.value = { value, name };
@@ -42,6 +52,12 @@ export const useAppState = () => {
   };
   const setArticlesNavState = (state: NavState) => {
     articlesNavState.value = { ...state };
+  };
+  const setBlogNavState = (state: NavState) => {
+    blogNavState.value = { ...state };
+  };
+  const setAboutNavState = (state: NavState) => {
+    aboutNavState.value = { ...state };
   };
   const setHasVisitedHomepage = (value: boolean) => {
     hasVisitedHomepage.value = value;
@@ -57,6 +73,8 @@ export const useAppState = () => {
     // States
     currentTheme,
     navState,
+    blogNavState,
+    aboutNavState,
     articlesNavState,
     hasVisitedHomepage,
     searchValue,
@@ -66,6 +84,8 @@ export const useAppState = () => {
     setTheme,
     setNavState,
     setArticlesNavState,
+    setBlogNavState,
+    setAboutNavState,
     setHasVisitedHomepage,
     setSearchValue,
     setIsLoggingEnabled,

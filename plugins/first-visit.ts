@@ -11,6 +11,8 @@ export default defineNuxtPlugin((nuxtApp) => {
       setHasVisitedHomepage(true);
       useFetchAppNavItems();
       useFetchArticlesNavItems();
+      useFetchBlogNavItems();
+      useFetchAboutNavItems();
     } else {
       log(LogLevel.DEBUG, "Not the first time visiting the homepage.");
     }

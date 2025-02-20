@@ -2,8 +2,9 @@
   <ul
     v-if="navItems"
     class="menu bg-base-300 h-full flex flex-col flex-nowrap overflow-y-scroll lg:mb-1"
+    :class="tailwindcssClasses"
   >
-    <li v-if="closeDrawerButton">
+    <li v-if="closeDrawerButton" class="lg:hidden">
       <div class="text-right" @click="closeDrawer">
         <MaterialSymbolsClose class="inline h-6 w-6 text-base-400" />
       </div>
@@ -19,6 +20,7 @@
         v-else
         :to="item.path"
         class="grid place-items-center w-full h-full"
+        @click="closeDrawer"
         >{{ item.navTitle ?? item.title ?? UNTITLED }}</NuxtLink
       >
     </li>
@@ -34,4 +36,5 @@ const { navItems, closeDrawerButton } = defineProps({
   closeDrawerButton: { type: Boolean, required: false },
 });
 const closeDrawer = inject<() => void>("closeDrawer");
+const tailwindcssClasses: string = inject("tailwindcssClasses") ?? "";
 </script>

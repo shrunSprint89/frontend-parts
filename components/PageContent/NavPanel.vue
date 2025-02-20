@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar bg-base-200 w-full p-0">
+  <nav class="navbar bg-base-200 w-full p-0" :class="tailwindcssClasses">
     <div class="navbar-start ps-3">
       <label
         for="my-drawer"
@@ -64,4 +64,5 @@ const handleNext = () => {
 const handlePrevious = () => {
   router.back();
 };
+const tailwindcssClasses: string = inject("tailwindcssClasses") ?? "";
 </script>

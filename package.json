@@ -30,6 +30,7 @@
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
     "nuxt": "latest",
+    "nuxt-particles": "^0.3.0",
     "postcss": "^8.5.1",
     "prettier": "^3.4.2",
     "typescript": "^5.7.3",
@@ -40,6 +41,7 @@
     "@heroicons/vue": "^2.2.0",
     "@nuxt/content": "^3.0.1",
     "minisearch": "^7.1.1",
-    "tm-themes": "^1.9.12"
+    "tm-themes": "^1.9.12",
+    "tsparticles-engine": "^2.12.0"
   }
 }

@@ -1,3 +1,5 @@
+import type { ContentNavigationItem } from "@nuxt/content";
+
 // @blocksort asc
 export enum ThemeValue {
   aqua = "Aqua",
@@ -38,4 +40,11 @@ export interface QuerySearchResult {
   titles: string[];
   level: number;
   content: string;
+}
+
+export interface NavState {
+  nav: ContentNavigationItem[];
+  isLoading: boolean;
+  isReady: boolean;
+  isError: boolean;
 }

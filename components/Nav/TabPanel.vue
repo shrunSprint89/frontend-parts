@@ -1,14 +1,11 @@
 <template>
-  <div
-    role="tablist"
-    class="flex flex-col space-y-2 md:space-y-0 md:tabs md:tabs-boxed w-full max-w-9/10"
-  >
+  <div role="tablist" class="space-y-0 tabs tabs-boxed w-full max-w-9/10">
     <button
       v-for="item in navItems"
       :key="item.path"
       role="tab"
       :aria-selected="isActiveTab(item)"
-      class="w-full ps-3 pe-3 md:indent-0 md:tab rounded-[5px]"
+      class="w-full ps-3 pe-3 indent-0 tab rounded-[5px]"
       :class="{ 'tab-active btn-active': isActiveTab(item) }"
       @click="navigateToPath(item)"
     >
@@ -51,9 +48,11 @@ router.afterEach((to) => {
 onMounted(() => {
   log(LogLevel.DEBUG, "NavTabPanel mounted");
   log(LogLevel.DEBUG, "Current path", router.currentRoute.value.path);
+
   setActiveTab({
     path: router.currentRoute.value.path,
   } as ContentNavigationItem);
+
   navItems.forEach((item) => {
     log(LogLevel.DEBUG, "NavTabPanel item", item);
     log(LogLevel.DEBUG, "NavTabPanel item path", item.path);

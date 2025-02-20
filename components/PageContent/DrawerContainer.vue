@@ -7,7 +7,9 @@
       class="drawer-toggle"
     />
 
-    <div class="drawer-content lg:col-span-6 lg:col-start-4">
+    <div
+      class="drawer-content lg:col-span-6 lg:col-start-4 xl:col-span-7 xl:col-start-3"
+    >
       <!-- Main Content -->
       <PageContentPanel class="flex-1">
         <slot />
@@ -15,7 +17,7 @@
     </div>
 
     <div
-      class="drawer-side w-screen lg:w-full h-full z-10 lg:z-auto lg:col-span-3 lg:col-start-1"
+      class="drawer-side w-screen lg:w-full h-full z-10 lg:z-auto lg:col-span-3 lg:col-start-1 xl:col-span-2"
     >
       <label
         for="my-drawer"

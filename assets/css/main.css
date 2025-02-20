@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .text-logo {
+    font-family: "Doto", "Raleway Dots", sans-serif;
+    @apply sm:text-xl md:text-2xl lg:text-5xl font-bold;
+  }
+}
+
 /* Define custom variables */
 :root {
   @apply min-h-dvh;
@@ -69,5 +76,16 @@ article {
   code,
   pre {
     @apply text-sm;
+  }
+
+  ul,
+  ol {
+    @apply list-disc list-inside;
+  }
+  ol {
+    @apply list-decimal;
+  }
+  a {
+    @apply hover:text-accent;
   }
 }

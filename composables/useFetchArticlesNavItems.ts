@@ -25,7 +25,9 @@ export default function useFetchArticlesNavItems() {
           LogLevel.DEBUG,
           `useArticlesNavItems -filteredItems: ${JSON.stringify(filteredItems)}`
         );
-        return filteredItems;
+        return filteredItems?.sort(
+          (a, b) => (a.navOrder as number) - (b.navOrder as number)
+        );
       });
     },
     [],

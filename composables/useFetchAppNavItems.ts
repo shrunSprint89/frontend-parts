@@ -15,14 +15,24 @@ export default function useFetchAppNavItems() {
       return useAllNavItems().then((items) => {
         log(LogLevel.DEBUG, `useAppNavItems: ${JSON.stringify(items)}`);
         const filteredItems: ContentNavigationItem[] | null =
-          items?.filter(
-            (item: ContentNavigationItem) =>
-              !item.path.includes(ARTICLES_ROUTE_PATH) &&
-              (!item.page || item.page !== false) &&
-              (item.navTitle || item.title)
-          ) ?? [];
-        log(LogLevel.DEBUG, `useAppNavItems: ${JSON.stringify(filteredItems)}`);
-        return filteredItems;
+          items
+            ?.slice()
+            .filter(
+              (item: ContentNavigationItem) =>
+                !item.path.includes(ARTICLES_ROUTE_PATH) &&
+                (!item.page || item.page !== false) &&
+                (item.navTitle || item.title)
+            ) ?? [];
+        const sortedItems = filteredItems.length
+          ? filteredItems.sort((itemA, itemB) => {
+              const navOrderA = (itemA.navOrder ?? 0) as number;
+              const navOrderB = (itemB.navOrder ?? 0) as number;
+              if (!navOrderA || !navOrderB) return 0;
+              return navOrderA - navOrderB;
+            })
+          : filteredItems;
+        log(LogLevel.DEBUG, `useAppNavItems: ${JSON.stringify(sortedItems)}`);
+        return sortedItems;
       });
     },
     [],
