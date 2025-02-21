@@ -39,7 +39,7 @@ Th world of frontend engineering is understood much better imho by understanding
 - **Focus**: Approaches to managing application state across different frameworks.
 - **Comparative Aspects**: Built-in state management solutions (e.g., React's Context API vs. Angular's Services vs. Vuex in Vue).
 
-## 3. **State Management solutions in the ecosystem**
+### 3. **State Management solutions in the ecosystem**
 
 - **Focus**: Approaches to managing application state across different frameworks' ecosystems
 - **Comparative Aspects**: External state management solutions (e.g., Redux vs. NgRx vs. Pinia).
@@ -88,3 +88,5 @@ Th world of frontend engineering is understood much better imho by understanding
 
 - **Focus**: Community support around each framework.
 - **Comparative Aspects**: Available libraries, plugins, and community resources, documentation coverage and readability
+
+Your welcome to [**suggest topics for comparison**](https://github.com/shrunSprint89/frontend-parts/edit/main/content/articles/pipeline.md)

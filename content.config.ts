@@ -36,6 +36,10 @@ export default defineContentConfig({
           }),
           z.record(z.string(), z.any())
         ),
+        excerpt: z.object({
+          type: z.string(),
+          children: z.any(),
+        }),
       }),
     }),
   },

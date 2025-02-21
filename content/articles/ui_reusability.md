@@ -21,9 +21,43 @@ seo:
   robots: "index, follow"
 ---
 
-## Introduction
+**Draft version**
 
-In modern frontend development, UI and code reusability are critical for building scalable and maintainable applications. Component-based architectures (CBA) are at the heart of React, Angular, and Vue, enabling developers to create modular, self-contained pieces of UI functionality [1][3]. This article compares how these frameworks approach UI and code reusability, highlighting their strengths and best practices.
+## What is the problem?
+
+In modern frontend development, UI and code reusability are critical for building scalable and maintainable applications. Consider this scenario: the application you are working on requires a user details search bar feature that triggers a search API call to the /users endpoint. But very soon you see the need to build another search bar for a different feature that searches through the /products endpoint. How do you handle this? This problem is magnified when you consider even smaller parts of frontend applications like buttons, cards, modals, toasts, lists etc, and especially when you have multiple teams working on the same application.
+
+There are various parts or types of code that can be reused across different parts of the application. These include:
+
+- Presentational UI code
+- Business logic
+- State management code
+- API calls
+- Utility functions
+
+## What is the solution?
+
+The more generic solutions in software development are:
+
+- Using libraries and modularization to share code
+- Classes and Inheritance for code reuse
+- Generics
+- Decorators
+- Aspect-oriented programming
+
+The frontend engineering community has come up with a few solutions that are more specific to frontend development.
+
+- Component-based architectures
+- Higher-order components
+- Concept of lifecycle hooks
+- Services and Dependency Injection
+- Context and Providers
+
+Lets look at these solutions in the context of Angular, React and Vue:
+
+## Libraries and modularization:
+
+These are a common solution across all frameworks.
 
 ## React
 
@@ -125,42 +159,3 @@ Vue.js emphasizes reusability via components and mixins.
 ## Conclusion
 
 React, Angular, and Vue offer powerful tools and patterns for achieving UI and code reusability. React excels with its flexible component composition and hooks, Angular with its structured approach and comprehensive framework, and Vue with its simplicity and ease of use. The choice of framework often depends on the specific requirements of the project, team expertise, and ecosystem preferences.
-
-```
-
-Citations:
-[1] https://www.angularminds.com/blog/how-to-create-and-use-reusable-react-components
-[2] https://www.xenonstack.com/insights/reusable-angular-components
-[3] https://30dayscoding.com/blog/building-reusable-ui-components-with-vue-js
-[4] https://moldstud.com/articles/p-maximizing-code-reusability-in-reactjs-development
-[5] https://www.ifourtechnolab.com/blog/creating-reusable-angular-components
-[6] https://www.digitalocean.com/community/tutorials/how-to-create-reusable-blocks-of-code-with-vue-single-file-components
-[7] https://buttercms.com/blog/building-reusable-components-using-react/
-[8] https://metadesignsolutions.com/a-practical-guide-to-creating-reusable-react-components/
-[9] https://www.angularminds.com/blog/how-to-build-reusable-and-maintainable-angular-components
-[10] https://blog.theodo.com/2021/06/choose-your-vue-code-reuse-pattern/
-[11] https://nerdleveltech.com/how-to-be-better-in-react-code-reusability-part1/
-[12] https://visioninfotech.net/component-based-architecture-best-practices-for-reusability-and-modularity-in-vue-js/
-[13] https://www.freecodecamp.org/news/how-to-build-reusable-react-components/
-[14] https://blog.nashtechglobal.com/creating-reusable-angular-components/
-[15] https://stackoverflow.com/questions/61250155/reusing-components-and-maintaining-state-with-vue
-[16] https://www.youtube.com/watch?v=Nsk9rbkZ26o
-[17] https://www.rishabhsoft.com/blog/reusable-ui-components-development
-[18] https://www.thisdot.co/blog/building-reusable-components-in-vue-3
-[19] https://www.youtube.com/watch?v=Gp95bKdmfok
-[20] https://30dayscoding.com/blog/building-reusable-angular-libraries-and-modules
-[21] https://vueschool.io/articles/vuejs-tutorials/reusing-logic-in-vue-components/
-[22] https://metadesignsolutions.com/wp-content/uploads/2024/05/react-component-reuse.jpg?sa=X&ved=2ahUKEwjVqYmvk9GLAxXRqVYBHUVMMfcQ_B16BAgEEAI
-[23] https://codedamn.com/news/vuejs/vuejs-mixins-composition-api-code-reusability
-[24] https://stackoverflow.com/questions/46417965/angular-component-code-reuse-strategy
-[25] https://learnvue.co/articles/composition-api-reusability
-[26] https://www.youtube.com/watch?v=tpSwvVYViRI
-[27] https://dev.to/padmajothi_athimoolam_23d/reusable-code-in-react-f7
-[28] https://www.codeproject.com/Articles/5368968/Creating-Reusable-Component-with-Angular
-[29] https://stackoverflow.com/questions/46884486/how-to-create-reusable-component-in-vue-js
-[30] https://blog.bitsrc.io/maximizing-code-reuse-in-react-35ee20ad362c
-[31] https://stackoverflow.com/questions/58883734/best-practices-for-reusing-methods-across-multiple-components-in-angular-8
-[32] https://dev.to/miracool/part-4-b-how-to-build-a-to-do-app-with-vue-js-creating-reusable-ui-5en8
-[33] https://blog.logrocket.com/building-reusable-ui-components-with-react-hooks/
-[34] https://stackoverflow.com/questions/57831524/best-approach-to-create-reusable-angular-ui-components
-```

@@ -1,9 +1,10 @@
 ---
 navTitle: Code maintenance
-navOrder: 1
+navOrder: 2
 layout: post
 title: Accessibility in Ng
 description: Educational site that gives a comparitive overview of parts of frontend applications, and frontend engineering challenges and commonly used solutions.
+navigation: false
 seo:
   title: Accessibility in Ng
   description: Educational site that gives a comparitive overview of parts of frontend applications, and frontend engineering challenges and commonly used solutions.
