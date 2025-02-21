@@ -81,11 +81,21 @@ article {
   ul,
   ol {
     @apply list-disc list-inside;
+    ul,
+    ol {
+      @apply indent-4 mt-0;
+    }
+    ol {
+      @apply indent-4 mt-0;
+    }
   }
   ol {
     @apply list-decimal;
   }
+
   a {
-    @apply hover:text-accent;
+    @apply underline hover:text-accent;
   }
+
+  @apply mb-2 md:mb-4 lg:mb-6;
 }

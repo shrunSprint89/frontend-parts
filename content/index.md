@@ -29,7 +29,7 @@ seo:
 
 #### The Reality
 
-Frontend frameworks have relatively short lifecycles [(Brutal lifecyle of JS frameworks)](https://stackoverflow.blog/2018/01/11/brutal-lifecycle-javascript-frameworks/). Popular frameworks today might be legacy technology in 3-5 years. The JavaScript ecosystem is particularly volatile in terms of framework popularity
+Frontend frameworks have relatively short lifecycles [(Brutal lifecyle of JS frameworks)](https://stackoverflow.blog/2018/01/11/brutal-lifecycle-javascript-frameworks/){target="\_blank"}. Popular frameworks today might be legacy technology in 3-5 years. The JavaScript ecosystem is particularly volatile in terms of framework popularity
 
 #### Observation and opinion
 
@@ -67,4 +67,4 @@ This website is a work in progress. I will be adding more content every week. Th
 
 ## Contributing
 
-If you find any errors or have any suggestions, please feel free to [open an issue or a pull request](https://github.com/shrunSprint89/frontend-parts).
+If you find any errors or have any suggestions, please feel free to [open an issue or a pull request](https://github.com/shrunSprint89/frontend-parts){target="\_blank"}.

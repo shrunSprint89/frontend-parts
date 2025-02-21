@@ -23,7 +23,7 @@ seo:
 
 ## About Sharan Selvaraj
 
-**Sharan Selvaraj** is a senior frontend engineer with expertise in modern JavaScript frameworks such as React and Angular. Sharan focuses on building scalable and maintainable systems and on delivering high-quality user experiences, without a bias towards any particular technology or framework.
+[**Sharan Selvaraj**](https://shrunsprint89.github.io/){target="\_blank"} is a senior engineer with expertise in multiple modern JavaScript frameworks such as Angular and React. Sharan focuses on building scalable and maintainable systems and on delivering high-quality user experiences, without a bias towards any particular technology or framework.
 
 ### Professional Background
 
@@ -31,10 +31,13 @@ Sharan has worked in various roles, including frontend development, team leaders
 
 ### Connect with Sharan
 
-[LinkedIn profile](https://www.linkedin.com/in/sharanselvaraj/)
-[GitHub profile](https://github.com/shrunsprint89)
-[X profile](https://x.com/shrunSpeak)
-[Personal portfolio](https://shrunsprint89.github.io/).
+[LinkedIn profile](https://www.linkedin.com/in/sharanselvaraj/){target="\_blank"}
+
+[GitHub profile](https://github.com/shrunsprint89){target="\_blank"}
+
+[X profile](https://x.com/shrunSpeak){target="\_blank"}
+
+[Personal portfolio](https://shrunsprint89.github.io/){target="\_blank"}
 
 ### Philosophy
 

@@ -49,43 +49,43 @@ If you consider points 5 and 8, I could think of React and Vue ecosystems (leavi
 
 ### Responsive, mobile and low bandwidth friendly:
 
-This is a must-have for any website. To have responsive and customizable components, I would need a lightweight CSS framework. Tailwind CSS is the most popular one. But I didn't want to build everything from scratch. So I looked at [DaisyUI](https://daisyui.com/) which is a Tailwind CSS component library.
+This is a must-have for any website. To have responsive and customizable components, I would need a lightweight CSS framework. Tailwind CSS is the most popular one. But I didn't want to build everything from scratch. So I looked at [DaisyUI](https://daisyui.com/){target="\_blank"} which is a Tailwind CSS component library.
 
 ### Font and colors suited for great reading experience:
 
-DaisyUI provided inbuilt themes which I could use to help the user customize the colors. As for the fonts, I used Google Fonts, but did some reading on [font pairing](https://webflow.com/blog/font-pairing) to make sure the fonts are suited for great reading experience. Another thing to note here is that this being a technical content website, I would need to be able to display code snippets. So the stack should support code highlighting as well.
+DaisyUI provided inbuilt themes which I could use to help the user customize the colors. As for the fonts, I used Google Fonts, but did some reading on [font pairing](https://webflow.com/blog/font-pairing){target="\_blank"} to make sure the fonts are suited for great reading experience. Another thing to note here is that this being a technical content website, I would need to be able to display code snippets. So the stack should support code highlighting as well.
 
 ## Tech Stack and Tools
 
 ### Frontend
 
-- [Nuxt 3](https://nuxt.com/)
-- [DaisyUI](https://daisyui.com/)
-- [Google Fonts](https://fonts.google.com/)
-- [Shiki](https://shiki.matsu.io/)
-- [Icones](https://icones.js.org/)
+- [Nuxt 3](https://nuxt.com/){target="\_blank"}
+- [DaisyUI](https://daisyui.com/){target="\_blank"}
+- [Google Fonts](https://fonts.google.com/){target="\_blank"}
+- [Shiki](https://shiki.matsu.io/){target="\_blank"}
+- [Icones](https://icones.js.org/){target="\_blank"}
 
 ### Backend
 
-- [Nuxt Content](https://content.nuxt.com/)
-- [Cloudflare D1](https://developers.cloudflare.com/d1/)
+- [Nuxt Content](https://content.nuxt.com/){target="\_blank"}
+- [Cloudflare D1](https://developers.cloudflare.com/d1/){target="\_blank"}
 
 ### Repository, CI/CD, Hosting and Deployment
 
-- [Cloudflare Pages](https://pages.cloudflare.com/)
-- [GitHub](https://github.com/)
+- [Cloudflare Pages](https://pages.cloudflare.com/){target="\_blank"}
+- [GitHub](https://github.com/){target="\_blank"}
 
 ### Development tools
 
-- [VS Code](https://code.visualstudio.com/) with the following extensions (relevant ones):
-  - [Vue support for VS Code](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-  - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-  - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-  - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-  - [PostCSS Language Support](https://marketplace.visualstudio.com/items?itemName=csstools.postcss)
-  - [MDC - Syntax highlighting and colon matching for MDC](https://open-vsx.org/vscode/item?itemName=Nuxt.mdc)
-  - [Markdown Editor](https://open-vsx.org/vscode/item?itemName=zaaack.markdown-editor)
-  - [Continue](https://open-vsx.org/vscode/item?itemName=Continue.continue)
-- [Git](https://git-scm.com/)
-- [GitHub CLI](https://cli.github.com/)
-- [Continue](https://continue.dev/)
+- [VS Code](https://code.visualstudio.com/){target="\_blank"} with the following extensions (relevant ones):
+  - [Vue support for VS Code](https://marketplace.visualstudio.com/items?itemName=Vue.volar){target="\_blank"}
+  - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss){target="\_blank"}
+  - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode){target="\_blank"}
+  - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint){target="\_blank"}
+  - [PostCSS Language Support](https://marketplace.visualstudio.com/items?itemName=csstools.postcss){target="\_blank"}
+  - [MDC - Syntax highlighting and colon matching for MDC](https://open-vsx.org/vscode/item?itemName=Nuxt.mdc){target="\_blank"}
+  - [Markdown Editor](https://open-vsx.org/vscode/item?itemName=zaaack.markdown-editor){target="\_blank"}
+  - [Continue](https://open-vsx.org/vscode/item?itemName=Continue.continue){target="\_blank"}
+- [Git](https://git-scm.com/){target="\_blank"}
+- [GitHub CLI](https://cli.github.com/){target="\_blank"}
+- [Continue](https://continue.dev/){target="\_blank"}
